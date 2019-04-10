@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER walkerwaqi@outlook.com
 
@@ -13,6 +13,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
         git vim apt-utils sudo zsh pkg-config doxygen graphviz curl wget net-tools inetutils-ping \
         python2.7 python2.7-dev python3 python3-dev ruby \
         libbz2-dev libssl-dev libgmp3-dev libicu-dev zlib1g-dev libusb-1.0-0-dev libcurl4-gnutls-dev
+
+# .profile
+RUN sed -i '1 a\\nexport TERM=xterm-256color' /root/.profile
 
 # zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
