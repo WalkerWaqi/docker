@@ -15,7 +15,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
         libbz2-dev libssl-dev libgmp3-dev libicu-dev zlib1g-dev libusb-1.0-0-dev libcurl4-gnutls-dev
 
 # .profile
-RUN sed -i '1 a\\nexport TERM=xterm-256color' /root/.profile
+RUN sed -i '1a\\nexport TERM=xterm-256color' /root/.profile
 
 # zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
