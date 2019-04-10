@@ -19,7 +19,7 @@ RUN sed -i '1a\\nexport TERM=xterm-256color' /root/.profile
 
 # zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-RUN sed -i 's/^ZSH_THEME="robbyrussell"$/ZSH_THEME="ys"/' /root/.zshrc
+RUN sed -i 's/^ZSH_THEME=".*"$/ZSH_THEME="ys"/' /root/.zshrc
 RUN sed -i '/^# export PATH=$HOME\/bin:\/usr\/local\/bin:$PATH$/a\\n[[ -s "$HOME\/.profile" ]] && source "$HOME\/.profile"' /root/.zshrc
 
 # go
