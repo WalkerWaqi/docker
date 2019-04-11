@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER walkerwaqi@outlook.com
 
-ADD go1.11.5.linux-amd64.tar.gz /usr/local
+ADD go1.12.3.linux-amd64.tar.gz /usr/local
 
 # RUN export http_proxy=http://172.17.0.1:1087 && export https_proxy=http://172.17.0.1:1087;
 
