@@ -7,7 +7,7 @@ ADD go1.12.3.linux-amd64.tar.gz /usr/local
 # RUN export http_proxy=http://172.17.0.1:1087 && export https_proxy=http://172.17.0.1:1087;
 
 # apt-get
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         apt-utils sudo zsh pkg-config \
         gcc g++ llvm-4.0 clang-4.0 libclang-4.0-dev \
         make automake autoconf autoconf-archive autotools-dev build-essential cmake gdb libtool autogen \
