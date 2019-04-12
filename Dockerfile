@@ -8,9 +8,11 @@ ADD go1.12.3.linux-amd64.tar.gz /usr/local
 
 # apt-get
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+        apt-utils sudo zsh pkg-config \
         gcc g++ llvm-4.0 clang-4.0 libclang-4.0-dev \
-        make automake autoconf autoconf-archive autotools-dev build-essential cmake gdb libtool autogen valgrind \
-        git vim apt-utils sudo zsh pkg-config doxygen graphviz curl wget net-tools inetutils-ping \
+        make automake autoconf autoconf-archive autotools-dev build-essential cmake gdb libtool autogen \
+        vim vim-runtime vim-doc vim-scripts ctags git valgrind doxygen graphviz \
+        curl wget net-tools inetutils-ping \
         python2.7 python2.7-dev python3 python3-dev ruby \
         libbz2-dev libssl-dev libgmp3-dev libicu-dev zlib1g-dev libusb-1.0-0-dev libcurl4-gnutls-dev
 
